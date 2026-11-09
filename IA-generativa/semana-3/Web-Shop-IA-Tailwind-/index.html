@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TAILWEAR — Independent Streetwear</title>
+  <meta name="description" content="TAILWEAR: independent streetwear. TW-001 Tribal Reflective Jacket.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="bg-black text-tw-light font-sans antialiased overflow-x-hidden">
+
+<!-- Interruptores CSS (checkbox + peer): abren menú y carrito sin JavaScript -->
+<input type="checkbox" id="menu-toggle" class="peer/menu sr-only">
+<input type="checkbox" id="cart-toggle" class="peer/cart sr-only">
+
+<!-- HEADER -->
+<header class="fixed top-0 inset-x-0 z-30 bg-black/90 backdrop-blur border-b border-tw-coal">
+  <div class="grid grid-cols-[auto_1fr_auto] md:grid-cols-3 items-center px-4 md:px-8 h-16">
+    <div class="flex items-center gap-4">
+      <label for="menu-toggle" class="cursor-pointer text-white hover:text-tw-orange transition" aria-label="Open menu">
+        <svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </label>
+      <a href="index.html" class="font-fraktur text-3xl text-white">Tailwear</a>
+    </div>
+    <nav class="hidden md:flex justify-center gap-10 font-mono text-[11px] tracking-[.3em]" aria-label="Main">
+      <a href="#home" class="hover:text-tw-orange transition">HOME</a>
+      <a href="#shop" class="hover:text-tw-orange transition">SHOP</a>
+      <a href="#collections" class="hover:text-tw-orange transition">COLLECTIONS</a>
+      <a href="#about" class="hover:text-tw-orange transition">ABOUT</a>
+    </nav>
+    <div class="flex items-center justify-end gap-4 text-white">
+      <a href="es.html" class="font-mono text-[11px] tracking-widest hover:text-tw-orange">EN / ES</a>
+      <a href="#" aria-label="Search" class="hover:text-tw-orange transition"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></a>
+      <a href="#" aria-label="Account" class="hidden sm:block hover:text-tw-orange transition"><svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></a>
+      <label for="cart-toggle" class="cursor-pointer hover:text-tw-orange transition relative" aria-label="Open cart">
+        <svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="absolute -top-2 -right-2 bg-tw-orange text-black font-mono text-[9px] size-4 grid place-items-center">2</span>
+      </label>
+    </div>
+  </div>
+</header>
+
+<!-- MENÚ LATERAL -->
+<label for="menu-toggle" class="fixed inset-0 z-40 bg-black/70 opacity-0 pointer-events-none peer-checked/menu:opacity-100 peer-checked/menu:pointer-events-auto transition-opacity" aria-hidden="true"></label>
+<aside class="fixed top-0 left-0 z-50 h-full w-[80%] max-w-xs bg-tw-ink border-r border-tw-coal p-8 -translate-x-full peer-checked/menu:translate-x-0 transition-transform duration-300">
+  <label for="menu-toggle" class="cursor-pointer font-mono text-xs tracking-widest text-tw-mid hover:text-tw-orange">[ CLOSE ]</label>
+  <nav class="mt-12 flex flex-col gap-6 font-mono text-sm tracking-[.25em] text-white" aria-label="Side menu">
+    <a href="#home" class="hover:text-tw-orange">HOME</a><a href="#shop" class="hover:text-tw-orange">SHOP</a>
+    <a href="#collections" class="hover:text-tw-orange">COLLECTIONS</a><a href="#about" class="hover:text-tw-orange">ABOUT</a>
+    <a href="#contact" class="hover:text-tw-orange">CONTACT</a>
+  </nav>
+</aside>
+
+<!-- CARRITO (demostración visual: sin JavaScript no hay lógica real) -->
+<label for="cart-toggle" class="fixed inset-0 z-40 bg-black/70 opacity-0 pointer-events-none peer-checked/cart:opacity-100 peer-checked/cart:pointer-events-auto transition-opacity" aria-hidden="true"></label>
+<aside class="fixed top-0 right-0 z-50 h-full w-full max-w-md bg-tw-ink border-l border-tw-coal flex flex-col translate-x-full peer-checked/cart:translate-x-0 transition-transform duration-300" aria-label="Shopping cart">
+  <div class="flex justify-between items-center p-6 border-b border-tw-coal">
+    <h2 class="font-mono text-sm tracking-[.3em] text-white">CART (2)</h2>
+    <label for="cart-toggle" class="cursor-pointer font-mono text-xs text-tw-mid hover:text-tw-orange">[ CLOSE ]</label>
+  </div>
+  <ul class="flex-1 overflow-y-auto divide-y divide-tw-coal">
+    <li class="flex gap-4 p-6">
+      <img src="assets/jacket.png" alt="TW-001 jacket" class="w-20 h-24 object-contain bg-black">
+      <div class="flex-1 text-sm">
+        <p class="text-white">Tribal Reflective Jacket</p>
+        <p class="font-mono text-xs text-tw-mid mt-1">TW-001 · SIZE M</p>
+        <div class="mt-3 flex items-center gap-3 font-mono text-xs">
+          <button type="button" class="size-6 border border-tw-coal hover:border-tw-orange" aria-label="Decrease">−</button><span>1</span>
+          <button type="button" class="size-6 border border-tw-coal hover:border-tw-orange" aria-label="Increase">+</button>
+          <button type="button" class="ml-auto text-tw-mid hover:text-tw-orange">REMOVE</button>
+        </div>
+      </div>
+      <p class="font-mono text-sm text-white">$289</p>
+    </li>
+    <li class="flex gap-4 p-6">
+      <div class="w-20 h-24 bg-black grid place-items-center font-mono text-[10px] text-tw-mid">TW-003</div>
+      <div class="flex-1 text-sm">
+        <p class="text-white">Dark Utility Hoodie</p>
+        <p class="font-mono text-xs text-tw-mid mt-1">TW-003 · SIZE L</p>
+        <div class="mt-3 flex items-center gap-3 font-mono text-xs">
+          <button type="button" class="size-6 border border-tw-coal hover:border-tw-orange" aria-label="Decrease">−</button><span>1</span>
+          <button type="button" class="size-6 border border-tw-coal hover:border-tw-orange" aria-label="Increase">+</button>
+          <button type="button" class="ml-auto text-tw-mid hover:text-tw-orange">REMOVE</button>
+        </div>
+      </div>
+      <p class="font-mono text-sm text-white">$98</p>
+    </li>
+  </ul>
+  <div class="p-6 border-t border-tw-coal font-mono text-xs tracking-widest space-y-2">
+    <p class="flex justify-between"><span>SUBTOTAL</span><span>$387</span></p>
+    <p class="flex justify-between text-white text-sm"><span>TOTAL</span><span>$387</span></p>
+    <button type="button" class="mt-4 w-full bg-tw-orange hover:bg-tw-orange-dark text-black py-4 tracking-[.3em] transition">CHECKOUT</button>
+    <p class="text-[10px] text-tw-mid normal-case tracking-normal pt-2">Visual demo only — no payments or live updates.</p>
+  </div>
+</aside>
+
+<main>
+<!-- HERO -->
+<section id="home" class="hero-bg relative min-h-screen flex flex-col justify-between overflow-hidden pt-24 pb-8 px-4 md:px-8">
+  <div class="relative z-20 flex justify-between font-mono text-[10px] md:text-xs tracking-[.25em]">
+    <p><span class="text-tw-orange block">EST. 2026</span>INDEPENDENT STREETWEAR</p>
+    <p class="text-right">TW-001 / TRIBAL REFLECTIVE</p>
+  </div>
+  <!-- Logo gigante DETRÁS de la chaqueta -->
+  <p class="absolute inset-0 z-0 grid place-items-center font-fraktur text-tw-light leading-none select-none text-[26vw] md:text-[20vw]" aria-hidden="true">Tailwear</p>
+  <!-- Chaqueta: PNG transparente. Más estrecha que el texto para que se lean las letras a los lados -->
+  <img src="assets/jacket.png" alt="TW-001 black bomber jacket with reflective silver tribal graphics"
+       class="reveal relative z-10 mx-auto w-[62%] sm:w-[48%] md:w-[34%] max-h-[60vh] object-contain drop-shadow-[0_30px_40px_rgba(0,0,0,.8)]">
+  <div class="relative z-20 flex flex-col md:flex-row md:items-end justify-between gap-6">
+    <p class="font-mono text-[10px] md:text-xs tracking-[.3em]">DESIGNED TO STAND OUT</p>
+    <div class="flex flex-col sm:flex-row gap-3">
+      <a href="#shop" class="bg-tw-orange hover:bg-tw-orange-dark text-black font-mono text-xs tracking-[.25em] px-7 py-4 text-center transition">SHOP COLLECTION →</a>
+      <a href="#about" class="border border-tw-mid hover:border-tw-orange hover:text-tw-orange font-mono text-xs tracking-[.25em] px-7 py-4 text-center transition">DISCOVER TAILWEAR</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEW ARRIVALS -->
+<section id="shop" class="px-4 md:px-8 py-24 max-w-7xl mx-auto">
+  <h2 class="font-fraktur text-5xl md:text-7xl text-white">NEW ARRIVALS</h2>
+  <p class="font-mono text-xs tracking-[.3em] text-tw-mid mt-2">NEW PIECES. NEW ATTITUDE.</p>
+  <ul class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+    <li class="group border border-tw-coal">
+      <div class="relative aspect-[3/4] bg-tw-ink overflow-hidden">
+        <img src="assets/jacket.png" alt="Tribal Reflective Jacket" class="size-full object-contain group-hover:scale-105 transition duration-500">
+        <span class="absolute top-2 left-2 bg-tw-orange text-black font-mono text-[10px] px-2 py-0.5">NEW</span>
+      </div>
+      <div class="p-3 md:p-4"><p class="font-mono text-[10px] text-tw-mid">TW-001 · JACKETS</p><h3 class="text-white text-sm mt-1">Tribal Reflective Jacket</h3><p class="font-mono text-sm mt-1">$289</p>
+        <button type="button" class="mt-3 w-full border border-tw-coal group-hover:border-tw-orange hover:bg-tw-orange hover:text-black font-mono text-[10px] tracking-[.25em] py-3 transition">ADD TO CART</button></div>
+    </li>
+    <li class="group border border-tw-coal">
+      <div class="relative aspect-[3/4] bg-tw-ink overflow-hidden"><img src="assets/tee.jpg" alt="Oversized Graphic Tee" class="size-full object-cover group-hover:scale-105 transition duration-500"><span class="absolute top-2 left-2 bg-tw-orange text-black font-mono text-[10px] px-2 py-0.5">NEW</span></div>
+      <div class="p-3 md:p-4"><p class="font-mono text-[10px] text-tw-mid">TW-002 · T-SHIRTS</p><h3 class="text-white text-sm mt-1">Oversized Graphic Tee</h3><p class="font-mono text-sm mt-1">$62</p>
+        <button type="button" class="mt-3 w-full border border-tw-coal group-hover:border-tw-orange hover:bg-tw-orange hover:text-black font-mono text-[10px] tracking-[.25em] py-3 transition">ADD TO CART</button></div>
+    </li>
+    <li class="group border border-tw-coal">
+      <div class="relative aspect-[3/4] bg-tw-ink overflow-hidden"><img src="assets/hoodie.jpg" alt="Dark Utility Hoodie" class="size-full object-cover group-hover:scale-105 transition duration-500"></div>
+      <div class="p-3 md:p-4"><p class="font-mono text-[10px] text-tw-mid">TW-003 · HOODIES</p><h3 class="text-white text-sm mt-1">Dark Utility Hoodie</h3><p class="font-mono text-sm mt-1">$98</p>
+        <button type="button" class="mt-3 w-full border border-tw-coal group-hover:border-tw-orange hover:bg-tw-orange hover:text-black font-mono text-[10px] tracking-[.25em] py-3 transition">ADD TO CART</button></div>
+    </li>
+    <li class="group border border-tw-coal">
+      <div class="relative aspect-[3/4] bg-tw-ink overflow-hidden"><img src="assets/pants.jpg" alt="Urban Cargo Pants" class="size-full object-cover group-hover:scale-105 transition duration-500"><span class="absolute top-2 left-2 bg-tw-orange text-black font-mono text-[10px] px-2 py-0.5">NEW</span></div>
+      <div class="p-3 md:p-4"><p class="font-mono text-[10px] text-tw-mid">TW-004 · PANTS</p><h3 class="text-white text-sm mt-1">Urban Cargo Pants</h3><p class="font-mono text-sm mt-1">$115</p>
+        <button type="button" class="mt-3 w-full border border-tw-coal group-hover:border-tw-orange hover:bg-tw-orange hover:text-black font-mono text-[10px] tracking-[.25em] py-3 transition">ADD TO CART</button></div>
+    </li>
+  </ul>
+</section>
+
+<!-- SHOP BY CATEGORY (cuadrícula asimétrica) -->
+<section id="collections" class="px-4 md:px-8 pb-24 max-w-7xl mx-auto">
+  <h2 class="font-fraktur text-4xl md:text-6xl text-white mb-10">SHOP BY CATEGORY</h2>
+  <div class="grid grid-cols-2 md:grid-cols-6 md:grid-rows-2 gap-4 md:h-[640px]">
+    <a href="#" class="group relative md:col-span-3 md:row-span-2 min-h-64 bg-tw-ink border border-tw-coal overflow-hidden"><img src="assets/cat-jackets.jpg" alt="Jackets" class="absolute inset-0 size-full object-cover opacity-70 group-hover:scale-105 group-hover:opacity-100 transition duration-500"><span class="absolute bottom-4 left-4 font-fraktur text-4xl text-white group-hover:text-tw-orange transition">JACKETS</span></a>
+    <a href="#" class="group relative md:col-span-3 min-h-40 bg-tw-ink border border-tw-coal overflow-hidden"><img src="assets/cat-tshirts.jpg" alt="T-shirts" class="absolute inset-0 size-full object-cover opacity-70 group-hover:scale-105 group-hover:opacity-100 transition duration-500"><span class="absolute bottom-4 left-4 font-fraktur text-3xl text-white group-hover:text-tw-orange transition">T-SHIRTS</span></a>
+    <a href="#" class="group relative md:col-span-1 min-h-40 bg-tw-ink border border-tw-coal overflow-hidden"><img src="assets/cat-hoodies.jpg" alt="Hoodies" class="absolute inset-0 size-full object-cover opacity-70 group-hover:opacity-100 transition duration-500"><span class="absolute bottom-3 left-3 font-fraktur text-2xl text-white group-hover:text-tw-orange transition">HOODIES</span></a>
+    <a href="#" class="group relative md:col-span-1 min-h-40 bg-tw-ink border border-tw-coal overflow-hidden"><img src="assets/cat-pants.jpg" alt="Pants" class="absolute inset-0 size-full object-cover opacity-70 group-hover:opacity-100 transition duration-500"><span class="absolute bottom-3 left-3 font-fraktur text-2xl text-white group-hover:text-tw-orange transition">PANTS</span></a>
+    <a href="#" class="group relative col-span-2 md:col-span-1 min-h-40 bg-tw-ink border border-tw-coal overflow-hidden"><img src="assets/cat-accessories.jpg" alt="Accessories" class="absolute inset-0 size-full object-cover opacity-70 group-hover:opacity-100 transition duration-500"><span class="absolute bottom-3 left-3 font-fraktur text-2xl text-white group-hover:text-tw-orange transition">ACCESSORIES</span></a>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCT -->
+<section class="bg-tw-ink border-y border-tw-coal">
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-24 grid md:grid-cols-2 gap-12 items-center">
+    <div class="bg-black border border-tw-coal p-6"><img src="assets/jacket.png" alt="TW-001 Tribal Reflective Jacket" class="w-full max-h-[600px] object-contain"></div>
+    <div>
+      <p class="font-mono text-xs tracking-[.3em] text-tw-orange">FEATURED · TW-001</p>
+      <h2 class="font-fraktur text-5xl md:text-6xl text-white mt-3">Tribal Reflective Jacket</h2>
+      <p class="font-mono text-2xl text-white mt-4">$289</p>
+      <p class="mt-6 text-tw-light/80 leading-relaxed max-w-md">An oversized bomber in premium technical nylon, carrying gothic tribal graphics in reflective silver across chest and sleeves.</p>
+      <ul class="mt-6 space-y-2 font-mono text-xs tracking-widest text-tw-mid">
+        <li>— TECHNICAL NYLON SHELL</li><li>— REFLECTIVE SILVER PRINT</li><li>— METAL ZIPPER + SLEEVE POCKET</li><li>— OVERSIZED FIT</li>
+      </ul>
+      <p class="mt-8 font-mono text-[10px] tracking-[.3em] text-tw-mid">SIZE</p>
+      <div class="mt-3 flex gap-2 font-mono text-xs">
+        <span class="size-11 grid place-items-center border border-tw-coal hover:border-tw-orange cursor-pointer">S</span>
+        <span class="size-11 grid place-items-center border border-tw-orange text-tw-orange">M</span>
+        <span class="size-11 grid place-items-center border border-tw-coal hover:border-tw-orange cursor-pointer">L</span>
+        <span class="size-11 grid place-items-center border border-tw-coal hover:border-tw-orange cursor-pointer">XL</span>
+      </div>
+      <button type="button" class="mt-8 w-full sm:w-auto bg-tw-orange hover:bg-tw-orange-dark text-black font-mono text-xs tracking-[.3em] px-10 py-4 transition">ADD TO CART</button>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="max-w-7xl mx-auto px-4 md:px-8 py-24 grid md:grid-cols-2 gap-12 items-center">
+  <div>
+    <h2 class="font-fraktur text-5xl md:text-7xl text-white">NOT MADE TO FIT IN.</h2>
+    <div class="mt-8 space-y-4 text-tw-light/80 leading-relaxed max-w-md">
+      <p>TAILWEAR is an independent streetwear brand built around individuality, self-expression and unconventional design.</p>
+      <p>We create pieces that challenge the ordinary. Every detail has a purpose. Every piece tells a story.</p>
+      <p class="font-mono text-xs tracking-[.3em] text-tw-orange">Designed to stand out.</p>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-4">
+    <img src="assets/about-1.jpg" alt="Urban fashion portrait" class="aspect-[3/4] w-full object-cover bg-tw-ink border border-tw-coal">
+    <img src="assets/about-2.jpg" alt="Streetwear detail" class="aspect-[3/4] w-full object-cover bg-tw-ink border border-tw-coal mt-10">
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer id="contact" class="border-t border-tw-coal px-4 md:px-8 py-12 font-mono text-[11px] tracking-[.2em] text-tw-mid">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
+    <a href="index.html" class="font-fraktur text-4xl text-white tracking-normal">Tailwear</a>
+    <nav class="flex flex-wrap gap-x-8 gap-y-3" aria-label="Footer">
+      <a href="#shop" class="hover:text-tw-orange">SHOP</a><a href="#collections" class="hover:text-tw-orange">COLLECTIONS</a><a href="#about" class="hover:text-tw-orange">ABOUT</a>
+      <a href="#" class="hover:text-tw-orange">CONTACT</a><a href="#" class="hover:text-tw-orange">INSTAGRAM</a>
+      <a href="#" class="hover:text-tw-orange">PRIVACY POLICY</a><a href="#" class="hover:text-tw-orange">TERMS &amp; CONDITIONS</a>
+    </nav>
+  </div>
+  <p class="max-w-7xl mx-auto mt-10">© 2026 TAILWEAR. ALL RIGHTS RESERVED.</p>
+</footer>
+</body>
+</html>
